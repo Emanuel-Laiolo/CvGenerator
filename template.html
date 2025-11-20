@@ -5,7 +5,7 @@
     <title>CV - {{ info.name }}</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #222; max-width: 850px; margin: 0 auto; padding: 40px; line-height: 1.5; }
-        a { color: #0056b3; text-decoration: none; font-weight: 600; } /* Enlaces en azul y un poco más gruesos */
+        a { color: #0056b3; text-decoration: none; font-weight: 600; }
         a:hover { text-decoration: underline; }
         
         .header { border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 20px; }
@@ -38,8 +38,8 @@
         <div class="contact-info">
             {{ info.location }} • {{ info.email }} <br>
             <a href="{{ info.linkedin }}" target="_blank">LinkedIn</a> • 
-            <a href="{{ info.github }}" target="_blank">GitHub</a> • 
-            <a href="https://yogalorena.com" target="_blank">Portfolio</a>
+            <a href="https://github.com/emanuel-laiolo" target="_blank">GitHub</a> • 
+            <a href="{{ info.portfolio }}" target="_blank">Portfolio</a>
         </div>
         <p style="margin-top: 15px; color: #444;">{{ summary }}</p>
     </header>
@@ -89,7 +89,7 @@
     
     <div class="footer">
         CV generated programmatically using Python & Jinja2.<br>
-        Source code available at: <span class="footer-link">github.com/The-Anderson/CvGenerator</span>
+        Live Web Version: <a href="{{ info.website }}" class="footer-link" target="_blank">{{ info.website }}</a>
     </div>
 </body>
 </html>
