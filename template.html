@@ -121,13 +121,18 @@
         {% endfor %}
         </header>
 
-    <section>
+   <section>
         <h2>Technical Skills</h2>
-        <ul class="skills-list">
-            {% for skill in skills %}
-            <li>🔹 {{ skill }}</li>
-            {% endfor %}
-        </ul>
+        {% for skill_group in skills %}
+        <div class="skill-group" style="margin-bottom: 15px;">
+            <h3 style="font-size: 1.0em; margin-bottom: 5px; color: #333; font-weight: bold; text-transform: uppercase;">{{ skill_group.category }}</h3>
+            <ul class="skills-list">
+                {% for detail in skill_group.details %}
+                <li>🔹 {{ detail }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
     </section>
 
     <section>
