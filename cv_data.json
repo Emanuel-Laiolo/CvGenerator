@@ -12,7 +12,7 @@
   "about": "Hello! My name is Emanuel. I was born in Argentina and currently live in Kraków, Poland. I am both an Argentine and an Italian citizen. I'd like to tell you a little about what I do and what I've been doing for the past six years (since I was 20), when I entered the IT world. I've always been around technology since I was a child, and I'm fascinated by its constant evolution. I have a degree in Computer Programming (UTN Argentina). I speak and write two languages fluently: English and Spanish.\n\nI'm passionate about AI and constantly learning and updating my skills.\n\nCV: https://emanuel-laiolo.github.io/CvGenerator/\n\nTechnologies and skills I use:\nI have a well-equipped setup for long work sessions. Flexible availability.\n\nI'm very intrigued and fascinated by learning and applying artificial intelligence in my life and projects. I currently use these tools for code/projects (Claude Code, Gemini, ChatRtx, Codex, and Copilot in VS Code) and for personal use, GPT-5.\n\nI'm the editor and administrator of the backend and frontend of \"Yogalorena.com,\" a website with payment and subscription systems that offers online yoga services. The technologies I used were: React with TypeScript, Vite (for a rapid development environment), Tailwind CSS, Shadcn UI, Frame Motion, a BaaS platform, PostgreSQL, Stripe, Cloudflare Stream, and Resend.\n\nAt 20, I created a mathematical bankroll management system, using solvers and a database for predicting equity, EV, risk and profit, probability, and statistics. I used several solvers and a multi-terabyte database.\n\nChatbots/Automation: I have experience training artificial intelligence models using Python. I also used Python to train a neural network that served as an OCR tool, comparing images to select an option.\n\nI'm happy to answer any questions about myself.\n\nI'm looking to join projects/jobs that require someone to work remotely, with flexible hours and adaptable to all types of projects/jobs, and interested in participating in worthwhile projects.",
   "skills": [
     {
-      "category": "Currently Used Development Stack (Yogalorena)",
+      "category": "Currently Used Development Stack",
       "details": [
         "Frontend: React, TypeScript, Vite, Tailwind CSS, Framer Motion, Shadcn/ui",
         "Backend/Data: Node.js, PostgreSQL, BaaS (Supabase), SQL, Stripe Integration, Cloudflare Stream, Resend"
@@ -27,7 +27,7 @@
     {
       "category": "University & Foundational Languages",
       "details": [
-        "C, C++, Java, PHP, JavaScript, SQL"
+        "C, C++, Java, PHP, JavaScript, Python, SQL"
       ]
     },
     {
