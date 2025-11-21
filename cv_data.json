@@ -8,8 +8,8 @@
     "github": "https://github.com/Emanuel-Laiolo/CvGenerator",
     "website": "https://emanuel-laiolo.github.io/CvGenerator/"
   },
-  "summary": "I graduate of 'University Technician in Programming' from the National Technical University of Argentina.",
-  "about": "Hello! My name is Emanuel. I was born in Argentina and currently live in Kraków, Poland. I am both an Argentine and an Italian citizen. I'd like to tell you a little about what I do and what I've been doing for the past six years (since I was 20), when I entered the IT world. I've always been around technology since I was a child, and I'm fascinated by its constant evolution. I have a degree in Computer Programming (UTN Argentina). I speak and write two languages fluently: English and Spanish.\n\nI'm passionate about AI and constantly learning and updating my skills.\n\nCV: https://emanuel-laiolo.github.io/CvGenerator/\n\nTechnologies and skills I use:\nI have a well-equipped setup for long work sessions. Flexible availability.\n\nI'm very intrigued and fascinated by learning and applying artificial intelligence in my life and projects. I currently use these tools for code/projects (Claude Code, Gemini, ChatRtx, Codex, and Copilot in VS Code) and for personal use, GPT-5.\n\nI'm the editor and administrator of the backend and frontend of \"Yogalorena.com,\" a website with payment and subscription systems that offers online yoga services. The technologies I used were: React with TypeScript, Vite (for a rapid development environment), Tailwind CSS, Shadcn UI, Frame Motion, a BaaS platform, PostgreSQL, Stripe, Cloudflare Stream, and Resend.\n\nAt 20, I created a mathematical bankroll management system, using solvers and a database for predicting equity, EV, risk and profit, probability, and statistics. I used several solvers and a multi-terabyte database.\n\nChatbots/Automation: I have experience training artificial intelligence models using Python. I also used Python to train a neural network that served as an OCR tool, comparing images to select an option.\n\nI'm happy to answer any questions about myself.\n\nI'm looking to join projects/jobs that require someone to work remotely, with flexible hours and adaptable to all types of projects/jobs, and interested in participating in worthwhile projects.",
+  "summary": "University Technician in Programming graduate from the National Technological University (UTN) of Argentina. Full Stack Developer focused on high-performance web applications and AI automation.",
+  "about": "Hello! I'm Emanuel, a dual citizen of Argentina and Italy, currently based in Kraków, Poland. With over six years of experience in the IT world, I specialize in Full Stack Development and algorithmic data analysis. I hold a degree in Computer Programming from UTN Argentina and am fluent in both English and Spanish.\n\nI am passionate about the constant evolution of technology, particularly in Artificial Intelligence. I actively use advanced AI tools to optimize code quality and accelerate development workflows. My background includes building VOD platforms with complex payment integrations and developing mathematical models for risk management.\n\nI am currently seeking remote opportunities that offer flexible hours and the chance to contribute to impactful projects.",
   "skills": [
     {
       "category": "Currently Used Development Stack",
@@ -21,7 +21,7 @@
     {
       "category": "AI & Automation Toolkit",
       "details": [
-        "Python, Claude Code, Gemini, ChatRTX, GitHub Copilot"
+        "Python, Claude Code, Gemini, ChatRTX, GitHub Copilot, Advanced LLMs"
       ]
     },
     {
@@ -42,7 +42,7 @@
       "role": "Lead Full Stack Developer & Administrator",
       "company": "Yogalorena.com",
       "dates": "Present",
-      "description": "Developed and currently manage a VOD platform with payment and subscription systems for online yoga services. Built with a focus on rapid development environment and high performance.",
+      "description": "Developed and currently manage a VOD platform with payment and subscription systems for online yoga services. Built with a focus on rapid development environments and high performance.",
       "stack": "React, TypeScript, Vite, Tailwind CSS, Shadcn/ui, PostgreSQL, Stripe, Cloudflare Stream, Resend."
     },
     {
@@ -63,9 +63,9 @@
   "education": [
     {
       "institution": "Universidad Tecnológica Nacional (UTN)",
-      "degree": "University Programmer Technician",
+      "degree": "University Technician in Programming",
       "year": "2018 - 2020",
-      "description": "I graduate of 'University Technician in Programming' from the National Technical Technical University of Argentina.",
+      "description": "Graduated from the National Technological University (UTN) of Argentina.",
       "subjects": [ 
         {"semester": "First Semester", "courses": ["Programming I", "Architecture and Operating Systems", "Mathematics", "Business Organization"]},
         {"semester": "Second Semester", "courses": ["Programming II", "Probability and Statistics", "Database I", "English I"]},
@@ -77,7 +77,7 @@
       "degree": "Continuous Learning (AI & Tech)",
       "institution": "Self-taught",
       "year": "Ongoing",
-      "description": "Advanced usage of AI tools for code optimization: Claude Code, Codex, ChatRTX and GPT-5 (Personal use)."
+      "description": "Advanced usage of AI tools for code optimization and problem solving: Claude Code, Codex, ChatRTX, and LLMs."
     }
   ]
 }
