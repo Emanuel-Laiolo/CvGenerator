@@ -103,7 +103,7 @@
             
                 <div class="job" style="margin-top: 5px; border-top: 1px solid #ddd; padding-top: 5px;">
                     <div class="job-header" id="subjects-header"> 
-                        <span class="role" style="font-weight: bold;">[+] Mostrar asignaturas cursadas</span>
+                        <span class="role" style="font-weight: bold;">[+] Show Courses</span>
                         <span class="dates">Universidad Tecnológica Nacional (UTN)</span>
                     </div>
                     <div class="job-content" id="subjects-content">
@@ -164,7 +164,6 @@
                         
                     </div>
                 </div>
-                
             
         
             
@@ -292,12 +291,12 @@ I'm looking to join projects/jobs that require someone to work remotely, with fl
                     content.classList.toggle('show');
                     this.classList.toggle('active');
 
-                    // Cambiar el texto del header
+                    // Cambiar el texto del header (Traducido en el JavaScript)
                     var roleSpan = this.querySelector('.role');
                     if (content.classList.contains('show')) {
-                        roleSpan.textContent = "[-] Ocultar asignaturas cursadas";
+                        roleSpan.textContent = "[-] Hide Courses";
                     } else {
-                        roleSpan.textContent = "[+] Mostrar asignaturas cursadas";
+                        roleSpan.textContent = "[+] Show Courses";
                     }
                 });
             }

@@ -103,7 +103,7 @@
             {% if edu.subjects %}
                 <div class="job" style="margin-top: 5px; border-top: 1px solid #ddd; padding-top: 5px;">
                     <div class="job-header" id="subjects-header"> 
-                        <span class="role" style="font-weight: bold;">[+] Mostrar asignaturas cursadas</span>
+                        <span class="role" style="font-weight: bold;">[+] Show Courses</span>
                         <span class="dates">{{ edu.institution }}</span>
                     </div>
                     <div class="job-content" id="subjects-content">
@@ -117,7 +117,6 @@
                         {% endfor %}
                     </div>
                 </div>
-                {# NO usamos 'break' aquí para evitar el error de Jinja2 #}
             {% endif %}
         {% endfor %}
         </header>
@@ -181,12 +180,12 @@
                     content.classList.toggle('show');
                     this.classList.toggle('active');
 
-                    // Cambiar el texto del header
+                    // Cambiar el texto del header (Traducido en el JavaScript)
                     var roleSpan = this.querySelector('.role');
                     if (content.classList.contains('show')) {
-                        roleSpan.textContent = "[-] Ocultar asignaturas cursadas";
+                        roleSpan.textContent = "[-] Hide Courses";
                     } else {
-                        roleSpan.textContent = "[+] Mostrar asignaturas cursadas";
+                        roleSpan.textContent = "[+] Show Courses";
                     }
                 });
             }
