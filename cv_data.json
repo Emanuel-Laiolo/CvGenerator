@@ -1,33 +1,34 @@
 {
   "info": {
     "name": "Emanuel",
-    "title": "\"It is important to view knowledge as sort of a semantic tree...\" - Elon Musk",
+    "title": "Full Stack Developer & Data Analyst",
     "location": "Kraków, Poland",
     "email": "ema_laiolo@gmail.com",
     "linkedin": "https://www.linkedin.com/in/emanuel-laiolo-300b31313",
     "github": "https://github.com/Emanuel-Laiolo/CvGenerator",
     "website": "https://emanuel-laiolo.github.io/CvGenerator/"
   },
-  "summary": "University Technician in Programming graduate from the National Technological University (UTN) of Argentina. Full Stack Developer focused on high-performance web applications and AI automation.",
-  "about": "Hello! I'm Emanuel, a dual citizen of Argentina and Italy, currently based in Kraków, Poland. With over six years of experience in the IT world, I specialize in Full Stack Development and algorithmic data analysis. I hold a degree in Computer Programming from UTN Argentina and am fluent in both English and Spanish.\n\nI am passionate about the constant evolution of technology, particularly in Artificial Intelligence. I actively use advanced AI tools to optimize code quality and accelerate development workflows. My background includes building VOD platforms with complex payment integrations and developing mathematical models for risk management.\n\nI am currently seeking remote opportunities that offer flexible hours and the chance to contribute to impactful projects.",
+  "summary": "Full Stack Developer specialized in high-performance web applications and AI automation. Background in algorithmic data analysis and mathematical modeling.",
+  "about": "Full Stack Developer and Data Analyst with over 6 years of experience. I specialize in building scalable web applications and implementing AI-driven automation. I combine strong foundational knowledge in algorithms with a modern, high-performance stack (React, Node.js, Python). I am constantly integrating State-of-the-Art AI tools into my workflow to optimize code quality and efficiency. Open to remote challenges.",
   "skills": [
     {
-      "category": "Currently Used Development Stack",
+      "category": "Development Stack",
       "details": [
-        "Frontend: React, TypeScript, Vite, Tailwind CSS, Framer Motion, Shadcn/ui",
-        "Backend/Data: Node.js, PostgreSQL, BaaS (Supabase), SQL, Stripe Integration, Cloudflare Stream, Resend"
+        "React, TypeScript, Vite, Tailwind CSS, Framer Motion",
+        "Node.js, PostgreSQL, Supabase, SQL, Stripe, Cloudflare Stream"
       ]
     },
     {
-      "category": "AI & Automation Toolkit",
+      "category": "AI & Automation",
       "details": [
-        "Python, Claude Code, Gemini, ChatRTX, GitHub Copilot, Advanced LLMs"
+        "Python, Neural Networks, OCR",
+        "Workflow Optimization with LLMs (Claude, Gemini, Copilot)"
       ]
     },
     {
-      "category": "University & Foundational Languages",
+      "category": "Foundational Tech",
       "details": [
-        "C, C++, Java, PHP, JavaScript, Python, SQL"
+        "C, C++, Java, PHP, SQL, Data Structures"
       ]
     },
     {
@@ -39,25 +40,25 @@
   ],
   "experience": [
     {
-      "role": "Lead Full Stack Developer & Administrator",
+      "role": "Lead Full Stack Developer",
       "company": "Yogalorena.com",
       "dates": "Present",
-      "description": "Developed and currently manage a VOD platform with payment and subscription systems for online yoga services. Built with a focus on rapid development environments and high performance.",
-      "stack": "React, TypeScript, Vite, Tailwind CSS, Shadcn/ui, PostgreSQL, Stripe, Cloudflare Stream, Resend."
+      "description": "Architected and manage a VOD platform with complex subscription systems. Focused on performance optimization and rapid feature deployment.",
+      "stack": "React, TypeScript, Vite, Tailwind CSS, PostgreSQL, Stripe, Resend."
     },
     {
-      "role": "AI & Python Automation Developer",
+      "role": "AI & Automation Developer",
       "company": "Independent Projects",
       "dates": "2022 - 2024",
-      "description": "Trained custom AI models using Python. Developed a Neural Network for OCR (Optical Character Recognition) to compare images and automate complex decision-making processes based on visual inputs.",
-      "stack": "Python, Neural Networks, OCR, Image Processing."
+      "description": "Developed custom Python solutions for automation. Built and trained a Neural Network for Optical Character Recognition (OCR) to automate decision-making based on visual data.",
+      "stack": "Python, Neural Networks, Computer Vision."
     },
     {
       "role": "Algorithmic Data Analyst",
       "company": "Private Quantitative Project",
       "dates": "2018 - 2022",
-      "description": "Created a mathematical bankroll management system at age 20. Utilized solvers and a multi-terabyte database to predict Equity, EV (Expected Value), risk, and profit based on statistical probability.",
-      "stack": "SQL, Big Data (Multi-TB DB), Solvers, Statistics & Probability."
+      "description": "Designed a mathematical bankroll management system using solvers and multi-terabyte databases to predict Equity, EV, and risk based on statistical probability.",
+      "stack": "SQL, Big Data, Statistics & Probability, Solvers."
     }
   ],
   "education": [
@@ -65,19 +66,13 @@
       "institution": "Universidad Tecnológica Nacional (UTN)",
       "degree": "University Technician in Programming",
       "year": "2018 - 2020",
-      "description": "Graduated from the National Technological University (UTN) of Argentina.",
-      "subjects": [ 
-        {"semester": "First Semester", "courses": ["Programming I", "Architecture and Operating Systems", "Mathematics", "Business Organization"]},
-        {"semester": "Second Semester", "courses": ["Programming II", "Probability and Statistics", "Database I", "English I"]},
-        {"semester": "Third Semester", "courses": ["Programming III", "Database II", "Systems Methodology I", "English II"]},
-        {"semester": "Fourth Semester", "courses": ["Programming IV", "Systems Methodology II", "Introduction to Data Analysis", "Legislation", "Software Development Management"]}
-      ]
+      "description": "Graduated from the National Technological University (UTN), Argentina."
     },
     {
-      "degree": "Continuous Learning (AI & Tech)",
+      "degree": "Continuous Learning",
       "institution": "Self-taught",
       "year": "Ongoing",
-      "description": "Advanced usage of AI tools for code optimization and problem solving: Claude Code, Codex, ChatRTX, and LLMs."
+      "description": "Constant research and application of AI technologies for software engineering (LLMs, Code Optimization)."
     }
   ]
 }

@@ -4,261 +4,143 @@
     <meta charset="UTF-8">
     <title>CV - Emanuel</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #222; max-width: 850px; margin: 0 auto; padding: 40px; line-height: 1.5; }
-        a { color: #0056b3; text-decoration: none; font-weight: 600; }
-        a:hover { text-decoration: underline; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; max-width: 800px; margin: 0 auto; padding: 40px; line-height: 1.6; }
+        a { color: #222; text-decoration: none; border-bottom: 1px dotted #666; }
+        a:hover { border-bottom: 1px solid #000; }
         
-        .header { border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 20px; }
-        h1 { margin: 0 0 5px 0; font-size: 2.2em; text-transform: uppercase; letter-spacing: 1px; }
-        .subtitle { font-size: 1.1em; color: #555; font-weight: bold; margin-bottom: 10px; }
+        .header { margin-bottom: 30px; border-bottom: 2px solid #333; padding-bottom: 10px; }
+        h1 { margin: 0; font-size: 2.5em; text-transform: uppercase; letter-spacing: 2px; line-height: 1; }
+        .role-title { font-size: 1.1em; color: #555; margin-top: 5px; margin-bottom: 15px; font-weight: 300; }
         
-        .contact-info { font-size: 0.95em; color: #444; margin-top: 10px; }
-        .contact-item { display: block; margin-bottom: 3px; } 
-        .contact-label { font-weight: bold; color: #666; font-size: 0.9em; margin-right: 5px; }
+        .contact-info { font-size: 0.9em; color: #555; margin-top: 5px; display: flex; flex-wrap: wrap; gap: 15px;}
         
-        section { margin-bottom: 25px; }
-        h2 { font-size: 1.3em; text-transform: uppercase; border-bottom: 1px solid #ccc; padding-bottom: 5px; margin-bottom: 15px; color: #333; }
+        section { margin-bottom: 30px; }
+        h2 { font-size: 1.1em; text-transform: uppercase; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-bottom: 15px; letter-spacing: 1px; }
         
         .job { margin-bottom: 20px; }
-        /* CSS para el Dropdown */
-        .job-header { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: baseline; 
-            cursor: pointer; 
-            position: relative; 
-            padding-right: 20px; 
-        }
-        .job-header::after { 
-            content: '▼'; 
-            position: absolute; 
-            right: 0; 
-            font-size: 0.8em; 
-            color: #555;
-            transition: transform 0.3s;
-        }
-        .job-header.active::after { 
-            transform: rotate(180deg); 
-        }
-        .job-content {
-            display: none;
-            padding-top: 5px;
-        }
-        .job-content.show {
-            display: block;
-        }
-        /* REGLAS EXCLUSIVAS PARA PDF / IMPRESIÓN */
-        @media print {
-            .job-content {
-                display: block !important;
-            }
-            .job-header::after {
-                content: none !important;
-            }
-            .job-header {
-                cursor: default !important;
-                padding-right: 0 !important;
-            }
-        }
-        /* Fin CSS para el Dropdown */
-        .role { font-weight: bold; font-size: 1.05em; }
-        .company { font-style: italic; color: #444; }
-        .dates { font-size: 0.9em; color: #777; }
-        .job-desc { margin-top: 5px; margin-bottom: 5px; text-align: justify; }
-        .stack { font-size: 0.85em; background-color: #f4f4f4; padding: 2px 6px; border-radius: 4px; color: #444; display: inline-block; margin-top: 2px;}
+        .job-header { display: flex; justify-content: space-between; align-items: baseline; }
+        .role { font-weight: bold; font-size: 1.05em; color: #000; }
+        .company { font-weight: normal; font-style: italic; color: #555; }
+        .dates { font-size: 0.9em; color: #666; white-space: nowrap; }
+        .job-desc { margin-top: 5px; margin-bottom: 5px; text-align: justify; font-size: 0.95em; color: #444; }
+        .stack { font-size: 0.85em; color: #666; margin-top: 3px; font-family: monospace; }
         
-        .skills-list { list-style: none; padding: 0; }
-        .skills-list li { margin-bottom: 5px; }
-        
-        /* IMPORTANTE: Esto hace que el texto largo respete los saltos de línea */
-        .about-text { white-space: pre-wrap; margin-top: 10px; color: #444; font-size: 0.95em; }
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .skill-category { font-weight: bold; font-size: 0.9em; text-transform: uppercase; margin-bottom: 5px; color: #444; }
+        .skill-list { list-style: none; padding: 0; margin: 0; font-size: 0.95em; color: #333; }
+        .skill-list li { margin-bottom: 2px; }
 
-        .footer { margin-top: 40px; font-size: 0.75em; color: #666; text-align: center; border-top: 1px solid #eee; padding-top: 15px; }
-        .footer-link { color: #444; font-weight: bold; text-decoration: none; }
+        .about-text { font-size: 0.95em; color: #444; }
+
+        .footer { margin-top: 50px; font-size: 0.7em; color: #999; text-align: center; border-top: 1px solid #eee; padding-top: 10px; }
+        
+        @media (max-width: 600px) {
+            .skills-grid { grid-template-columns: 1fr; }
+            .job-header { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
     <header class="header">
         <h1>Emanuel</h1>
-        
-        <div class="subtitle" style="font-size: 1.1em; color: #555; font-style: italic; margin-bottom: 10px;">"It is important to view knowledge as sort of a semantic tree..." - Elon Musk</div>
+        <div class="role-title">Full Stack Developer & Data Analyst</div>
         
         <div class="contact-info">
-            <div class="contact-item">
-                📍 Kraków, Poland • ✉️ ema_laiolo@gmail.com
-            </div>
-            <div class="contact-item">
-                <span class="contact-label">LinkedIn:</span> 
-                <a href="https://www.linkedin.com/in/emanuel-laiolo-300b31313" target="_blank">linkedin.com/in/emanuel-laiolo-300b31313</a>
-            </div>
-            <div class="contact-item">
-                <span class="contact-label">GitHub Repo:</span> 
-                <a href="https://github.com/Emanuel-Laiolo/CvGenerator" target="_blank">github.com/Emanuel-Laiolo/CvGenerator</a>
-            </div>
-            </div>
+            <span>📍 Kraków, Poland</span>
+            <span>✉️ ema_laiolo@gmail.com</span>
+            <span><a href="https://www.linkedin.com/in/emanuel-laiolo-300b31313" target="_blank">LinkedIn</a></span>
+            <span><a href="https://github.com/Emanuel-Laiolo/CvGenerator" target="_blank">GitHub</a></span>
+            <span><a href="https://emanuel-laiolo.github.io/CvGenerator/" target="_blank">Portfolio</a></span>
+        </div>
+    </header>
 
-        <p style="margin-top: 15px; color: #444;">University Technician in Programming graduate from the National Technological University (UTN) of Argentina. Full Stack Developer focused on high-performance web applications and AI automation.</p>
-
+    <section>
+        <h2>Experience</h2>
         
+        <div class="job">
+            <div class="job-header">
+                <div><span class="role">Lead Full Stack Developer</span> <span class="company">| Yogalorena.com</span></div>
+                <span class="dates">Present</span>
+            </div>
+            <p class="job-desc">Architected and manage a VOD platform with complex subscription systems. Focused on performance optimization and rapid feature deployment.</p>
             
-                <div class="job" style="margin-top: 5px; border-top: 1px solid #ddd; padding-top: 5px;">
-                    <div class="job-header" id="subjects-header"> 
-                        <span class="role" style="font-weight: bold;">[+] Show Courses</span>
-                        <span class="dates">Universidad Tecnológica Nacional (UTN)</span>
-                    </div>
-                    <div class="job-content" id="subjects-content">
-                        
-                            <p style="margin-top: 10px; margin-bottom: 5px; font-weight: bold; font-size: 0.95em;">First Semester:</p>
-                            <ul style="list-style-type: disc; margin-left: 30px; padding-left: 0; font-size: 0.9em;">
-                                
-                                    <li>Programming I</li>
-                                
-                                    <li>Architecture and Operating Systems</li>
-                                
-                                    <li>Mathematics</li>
-                                
-                                    <li>Business Organization</li>
-                                
-                            </ul>
-                        
-                            <p style="margin-top: 10px; margin-bottom: 5px; font-weight: bold; font-size: 0.95em;">Second Semester:</p>
-                            <ul style="list-style-type: disc; margin-left: 30px; padding-left: 0; font-size: 0.9em;">
-                                
-                                    <li>Programming II</li>
-                                
-                                    <li>Probability and Statistics</li>
-                                
-                                    <li>Database I</li>
-                                
-                                    <li>English I</li>
-                                
-                            </ul>
-                        
-                            <p style="margin-top: 10px; margin-bottom: 5px; font-weight: bold; font-size: 0.95em;">Third Semester:</p>
-                            <ul style="list-style-type: disc; margin-left: 30px; padding-left: 0; font-size: 0.9em;">
-                                
-                                    <li>Programming III</li>
-                                
-                                    <li>Database II</li>
-                                
-                                    <li>Systems Methodology I</li>
-                                
-                                    <li>English II</li>
-                                
-                            </ul>
-                        
-                            <p style="margin-top: 10px; margin-bottom: 5px; font-weight: bold; font-size: 0.95em;">Fourth Semester:</p>
-                            <ul style="list-style-type: disc; margin-left: 30px; padding-left: 0; font-size: 0.9em;">
-                                
-                                    <li>Programming IV</li>
-                                
-                                    <li>Systems Methodology II</li>
-                                
-                                    <li>Introduction to Data Analysis</li>
-                                
-                                    <li>Legislation</li>
-                                
-                                    <li>Software Development Management</li>
-                                
-                            </ul>
-                        
-                    </div>
-                </div>
+            <div class="stack">[Stack]: React, TypeScript, Vite, Tailwind CSS, PostgreSQL, Stripe, Resend.</div>
             
+        </div>
         
+        <div class="job">
+            <div class="job-header">
+                <div><span class="role">AI & Automation Developer</span> <span class="company">| Independent Projects</span></div>
+                <span class="dates">2022 - 2024</span>
+            </div>
+            <p class="job-desc">Developed custom Python solutions for automation. Built and trained a Neural Network for Optical Character Recognition (OCR) to automate decision-making based on visual data.</p>
             
+            <div class="stack">[Stack]: Python, Neural Networks, Computer Vision.</div>
+            
+        </div>
         
-        </header>
+        <div class="job">
+            <div class="job-header">
+                <div><span class="role">Algorithmic Data Analyst</span> <span class="company">| Private Quantitative Project</span></div>
+                <span class="dates">2018 - 2022</span>
+            </div>
+            <p class="job-desc">Designed a mathematical bankroll management system using solvers and multi-terabyte databases to predict Equity, EV, and risk based on statistical probability.</p>
+            
+            <div class="stack">[Stack]: SQL, Big Data, Statistics & Probability, Solvers.</div>
+            
+        </div>
+        
+    </section>
 
    <section>
         <h2>Technical Skills</h2>
-        
-        <div class="skill-group" style="margin-bottom: 15px;">
-            <h3 style="font-size: 1.0em; margin-bottom: 5px; color: #333; font-weight: bold; text-transform: uppercase;">Currently Used Development Stack</h3>
-            <ul class="skills-list">
-                
-                <li>🔹 Frontend: React, TypeScript, Vite, Tailwind CSS, Framer Motion, Shadcn/ui</li>
-                
-                <li>🔹 Backend/Data: Node.js, PostgreSQL, BaaS (Supabase), SQL, Stripe Integration, Cloudflare Stream, Resend</li>
-                
-            </ul>
+        <div class="skills-grid">
+            
+            <div>
+                <div class="skill-category">Development Stack</div>
+                <ul class="skill-list">
+                    
+                    <li>React, TypeScript, Vite, Tailwind CSS, Framer Motion</li>
+                    
+                    <li>Node.js, PostgreSQL, Supabase, SQL, Stripe, Cloudflare Stream</li>
+                    
+                </ul>
+            </div>
+            
+            <div>
+                <div class="skill-category">AI & Automation</div>
+                <ul class="skill-list">
+                    
+                    <li>Python, Neural Networks, OCR</li>
+                    
+                    <li>Workflow Optimization with LLMs (Claude, Gemini, Copilot)</li>
+                    
+                </ul>
+            </div>
+            
+            <div>
+                <div class="skill-category">Foundational Tech</div>
+                <ul class="skill-list">
+                    
+                    <li>C, C++, Java, PHP, SQL, Data Structures</li>
+                    
+                </ul>
+            </div>
+            
+            <div>
+                <div class="skill-category">Languages</div>
+                <ul class="skill-list">
+                    
+                    <li>Spanish (Native), English (Fluent)</li>
+                    
+                </ul>
+            </div>
+            
         </div>
-        
-        <div class="skill-group" style="margin-bottom: 15px;">
-            <h3 style="font-size: 1.0em; margin-bottom: 5px; color: #333; font-weight: bold; text-transform: uppercase;">AI & Automation Toolkit</h3>
-            <ul class="skills-list">
-                
-                <li>🔹 Python, Claude Code, Gemini, ChatRTX, GitHub Copilot, Advanced LLMs</li>
-                
-            </ul>
-        </div>
-        
-        <div class="skill-group" style="margin-bottom: 15px;">
-            <h3 style="font-size: 1.0em; margin-bottom: 5px; color: #333; font-weight: bold; text-transform: uppercase;">University & Foundational Languages</h3>
-            <ul class="skills-list">
-                
-                <li>🔹 C, C++, Java, PHP, JavaScript, Python, SQL</li>
-                
-            </ul>
-        </div>
-        
-        <div class="skill-group" style="margin-bottom: 15px;">
-            <h3 style="font-size: 1.0em; margin-bottom: 5px; color: #333; font-weight: bold; text-transform: uppercase;">Languages</h3>
-            <ul class="skills-list">
-                
-                <li>🔹 Spanish (Native), English (Fluent)</li>
-                
-            </ul>
-        </div>
-        
     </section>
 
     <section>
-        <h2>Professional Experience & Projects</h2>
-        
-        <div class="job">
-            <div class="job-header">
-                <div>
-                    <span class="role">Lead Full Stack Developer & Administrator</span> | <span class="company">Yogalorena.com</span>
-                </div>
-                <span class="dates">Present</span>
-            </div>
-            <p class="job-desc">Developed and currently manage a VOD platform with payment and subscription systems for online yoga services. Built with a focus on rapid development environments and high performance.</p>
-            
-            <div class="stack"><strong>Stack:</strong> React, TypeScript, Vite, Tailwind CSS, Shadcn/ui, PostgreSQL, Stripe, Cloudflare Stream, Resend.</div>
-            
-        </div>
-        
-        <div class="job">
-            <div class="job-header">
-                <div>
-                    <span class="role">AI & Python Automation Developer</span> | <span class="company">Independent Projects</span>
-                </div>
-                <span class="dates">2022 - 2024</span>
-            </div>
-            <p class="job-desc">Trained custom AI models using Python. Developed a Neural Network for OCR (Optical Character Recognition) to compare images and automate complex decision-making processes based on visual inputs.</p>
-            
-            <div class="stack"><strong>Stack:</strong> Python, Neural Networks, OCR, Image Processing.</div>
-            
-        </div>
-        
-        <div class="job">
-            <div class="job-header">
-                <div>
-                    <span class="role">Algorithmic Data Analyst</span> | <span class="company">Private Quantitative Project</span>
-                </div>
-                <span class="dates">2018 - 2022</span>
-            </div>
-            <p class="job-desc">Created a mathematical bankroll management system at age 20. Utilized solvers and a multi-terabyte database to predict Equity, EV (Expected Value), risk, and profit based on statistical probability.</p>
-            
-            <div class="stack"><strong>Stack:</strong> SQL, Big Data (Multi-TB DB), Solvers, Statistics & Probability.</div>
-            
-        </div>
-        
-    </section>
-
-    <section>
-        <h2>Education</h2>
+        <h2>Education & Growth</h2>
         
         <div class="job">
             <div class="job-header">
@@ -267,59 +149,30 @@
             </div>
             <div class="company">Universidad Tecnológica Nacional (UTN)</div>
             
-            <p class="job-desc" style="font-size: 0.9em;">Graduated from the National Technological University (UTN) of Argentina.</p>
+            <p class="job-desc">Graduated from the National Technological University (UTN), Argentina.</p>
             
         </div>
         
         <div class="job">
             <div class="job-header">
-                <span class="role">Continuous Learning (AI & Tech)</span>
+                <span class="role">Continuous Learning</span>
                 <span class="dates">Ongoing</span>
             </div>
             <div class="company">Self-taught</div>
             
-            <p class="job-desc" style="font-size: 0.9em;">Advanced usage of AI tools for code optimization and problem solving: Claude Code, Codex, ChatRTX, and LLMs.</p>
+            <p class="job-desc">Constant research and application of AI technologies for software engineering (LLMs, Code Optimization).</p>
             
         </div>
         
     </section>
     
     <section>
-        <h2>About Me</h2>
-        <div class="about-text">Hello! I'm Emanuel, a dual citizen of Argentina and Italy, currently based in Kraków, Poland. With over six years of experience in the IT world, I specialize in Full Stack Development and algorithmic data analysis. I hold a degree in Computer Programming from UTN Argentina and am fluent in both English and Spanish.
-
-I am passionate about the constant evolution of technology, particularly in Artificial Intelligence. I actively use advanced AI tools to optimize code quality and accelerate development workflows. My background includes building VOD platforms with complex payment integrations and developing mathematical models for risk management.
-
-I am currently seeking remote opportunities that offer flexible hours and the chance to contribute to impactful projects.</div>
+        <h2>Profile</h2>
+        <div class="about-text">Full Stack Developer and Data Analyst with over 6 years of experience. I specialize in building scalable web applications and implementing AI-driven automation. I combine strong foundational knowledge in algorithms with a modern, high-performance stack (React, Node.js, Python). I am constantly integrating State-of-the-Art AI tools into my workflow to optimize code quality and efficiency. Open to remote challenges.</div>
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Script específico para el desplegable de materias
-            var header = document.getElementById('subjects-header');
-            var content = document.getElementById('subjects-content');
-            
-            if (header && content) {
-                header.addEventListener('click', function() {
-                    content.classList.toggle('show');
-                    this.classList.toggle('active');
-
-                    // Cambiar el texto del header (Traducido en el JavaScript)
-                    var roleSpan = this.querySelector('.role');
-                    if (content.classList.contains('show')) {
-                        roleSpan.textContent = "[-] Hide Courses";
-                    } else {
-                        roleSpan.textContent = "[+] Show Courses";
-                    }
-                });
-            }
-        });
-    </script>
-    
     <div class="footer">
-        CV generated programmatically using Python & Jinja2.<br>
-        Live Web Version: <a href="https://emanuel-laiolo.github.io/CvGenerator/" class="footer-link" target="_blank">https://emanuel-laiolo.github.io/CvGenerator/</a><br>
-        Code: <strong>github.com/Emanuel-Laiolo/CvGenerator</strong>
+        Plain text CV generated programmatically.
     </div>
 </body>
 </html>

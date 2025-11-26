@@ -4,157 +4,90 @@
     <meta charset="UTF-8">
     <title>CV - {{ info.name }}</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #222; max-width: 850px; margin: 0 auto; padding: 40px; line-height: 1.5; }
-        a { color: #0056b3; text-decoration: none; font-weight: 600; }
-        a:hover { text-decoration: underline; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; max-width: 800px; margin: 0 auto; padding: 40px; line-height: 1.6; }
+        a { color: #222; text-decoration: none; border-bottom: 1px dotted #666; }
+        a:hover { border-bottom: 1px solid #000; }
         
-        .header { border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 20px; }
-        h1 { margin: 0 0 5px 0; font-size: 2.2em; text-transform: uppercase; letter-spacing: 1px; }
-        .subtitle { font-size: 1.1em; color: #555; font-weight: bold; margin-bottom: 10px; }
+        .header { margin-bottom: 30px; border-bottom: 2px solid #333; padding-bottom: 10px; }
+        h1 { margin: 0; font-size: 2.5em; text-transform: uppercase; letter-spacing: 2px; line-height: 1; }
+        .role-title { font-size: 1.1em; color: #555; margin-top: 5px; margin-bottom: 15px; font-weight: 300; }
         
-        .contact-info { font-size: 0.95em; color: #444; margin-top: 10px; }
-        .contact-item { display: block; margin-bottom: 3px; } 
-        .contact-label { font-weight: bold; color: #666; font-size: 0.9em; margin-right: 5px; }
+        .contact-info { font-size: 0.9em; color: #555; margin-top: 5px; display: flex; flex-wrap: wrap; gap: 15px;}
         
-        section { margin-bottom: 25px; }
-        h2 { font-size: 1.3em; text-transform: uppercase; border-bottom: 1px solid #ccc; padding-bottom: 5px; margin-bottom: 15px; color: #333; }
+        section { margin-bottom: 30px; }
+        h2 { font-size: 1.1em; text-transform: uppercase; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-bottom: 15px; letter-spacing: 1px; }
         
         .job { margin-bottom: 20px; }
-        /* CSS para el Dropdown */
-        .job-header { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: baseline; 
-            cursor: pointer; 
-            position: relative; 
-            padding-right: 20px; 
-        }
-        .job-header::after { 
-            content: '▼'; 
-            position: absolute; 
-            right: 0; 
-            font-size: 0.8em; 
-            color: #555;
-            transition: transform 0.3s;
-        }
-        .job-header.active::after { 
-            transform: rotate(180deg); 
-        }
-        .job-content {
-            display: none;
-            padding-top: 5px;
-        }
-        .job-content.show {
-            display: block;
-        }
-        /* REGLAS EXCLUSIVAS PARA PDF / IMPRESIÓN */
-        @media print {
-            .job-content {
-                display: block !important;
-            }
-            .job-header::after {
-                content: none !important;
-            }
-            .job-header {
-                cursor: default !important;
-                padding-right: 0 !important;
-            }
-        }
-        /* Fin CSS para el Dropdown */
-        .role { font-weight: bold; font-size: 1.05em; }
-        .company { font-style: italic; color: #444; }
-        .dates { font-size: 0.9em; color: #777; }
-        .job-desc { margin-top: 5px; margin-bottom: 5px; text-align: justify; }
-        .stack { font-size: 0.85em; background-color: #f4f4f4; padding: 2px 6px; border-radius: 4px; color: #444; display: inline-block; margin-top: 2px;}
+        .job-header { display: flex; justify-content: space-between; align-items: baseline; }
+        .role { font-weight: bold; font-size: 1.05em; color: #000; }
+        .company { font-weight: normal; font-style: italic; color: #555; }
+        .dates { font-size: 0.9em; color: #666; white-space: nowrap; }
+        .job-desc { margin-top: 5px; margin-bottom: 5px; text-align: justify; font-size: 0.95em; color: #444; }
+        .stack { font-size: 0.85em; color: #666; margin-top: 3px; font-family: monospace; }
         
-        .skills-list { list-style: none; padding: 0; }
-        .skills-list li { margin-bottom: 5px; }
-        
-        /* IMPORTANTE: Esto hace que el texto largo respete los saltos de línea */
-        .about-text { white-space: pre-wrap; margin-top: 10px; color: #444; font-size: 0.95em; }
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .skill-category { font-weight: bold; font-size: 0.9em; text-transform: uppercase; margin-bottom: 5px; color: #444; }
+        .skill-list { list-style: none; padding: 0; margin: 0; font-size: 0.95em; color: #333; }
+        .skill-list li { margin-bottom: 2px; }
 
-        .footer { margin-top: 40px; font-size: 0.75em; color: #666; text-align: center; border-top: 1px solid #eee; padding-top: 15px; }
-        .footer-link { color: #444; font-weight: bold; text-decoration: none; }
+        .about-text { font-size: 0.95em; color: #444; }
+
+        .footer { margin-top: 50px; font-size: 0.7em; color: #999; text-align: center; border-top: 1px solid #eee; padding-top: 10px; }
+        
+        @media (max-width: 600px) {
+            .skills-grid { grid-template-columns: 1fr; }
+            .job-header { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
     <header class="header">
         <h1>{{ info.name }}</h1>
-        
-        <div class="subtitle" style="font-size: 1.1em; color: #555; font-style: italic; margin-bottom: 10px;">{{ info.title }}</div>
+        <div class="role-title">{{ info.title }}</div>
         
         <div class="contact-info">
-            <div class="contact-item">
-                📍 {{ info.location }} • ✉️ {{ info.email }}
-            </div>
-            <div class="contact-item">
-                <span class="contact-label">LinkedIn:</span> 
-                <a href="{{ info.linkedin }}" target="_blank">linkedin.com/in/emanuel-laiolo-300b31313</a>
-            </div>
-            <div class="contact-item">
-                <span class="contact-label">GitHub Repo:</span> 
-                <a href="{{ info.github }}" target="_blank">github.com/Emanuel-Laiolo/CvGenerator</a>
-            </div>
-            </div>
-
-        <p style="margin-top: 15px; color: #444;">{{ summary }}</p>
-
-        {% for edu in education %}
-            {% if edu.subjects %}
-                <div class="job" style="margin-top: 5px; border-top: 1px solid #ddd; padding-top: 5px;">
-                    <div class="job-header" id="subjects-header"> 
-                        <span class="role" style="font-weight: bold;">[+] Show Courses</span>
-                        <span class="dates">{{ edu.institution }}</span>
-                    </div>
-                    <div class="job-content" id="subjects-content">
-                        {% for semester_data in edu.subjects %}
-                            <p style="margin-top: 10px; margin-bottom: 5px; font-weight: bold; font-size: 0.95em;">{{ semester_data.semester }}:</p>
-                            <ul style="list-style-type: disc; margin-left: 30px; padding-left: 0; font-size: 0.9em;">
-                                {% for course in semester_data.courses %}
-                                    <li>{{ course }}</li>
-                                {% endfor %}
-                            </ul>
-                        {% endfor %}
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
-        </header>
-
-   <section>
-        <h2>Technical Skills</h2>
-        {% for skill_group in skills %}
-        <div class="skill-group" style="margin-bottom: 15px;">
-            <h3 style="font-size: 1.0em; margin-bottom: 5px; color: #333; font-weight: bold; text-transform: uppercase;">{{ skill_group.category }}</h3>
-            <ul class="skills-list">
-                {% for detail in skill_group.details %}
-                <li>🔹 {{ detail }}</li>
-                {% endfor %}
-            </ul>
+            <span>📍 {{ info.location }}</span>
+            <span>✉️ {{ info.email }}</span>
+            <span><a href="{{ info.linkedin }}" target="_blank">LinkedIn</a></span>
+            <span><a href="{{ info.github }}" target="_blank">GitHub</a></span>
+            <span><a href="{{ info.website }}" target="_blank">Portfolio</a></span>
         </div>
-        {% endfor %}
-    </section>
+    </header>
 
     <section>
-        <h2>Professional Experience & Projects</h2>
+        <h2>Experience</h2>
         {% for job in experience %}
         <div class="job">
             <div class="job-header">
-                <div>
-                    <span class="role">{{ job.role }}</span> | <span class="company">{{ job.company }}</span>
-                </div>
+                <div><span class="role">{{ job.role }}</span> <span class="company">| {{ job.company }}</span></div>
                 <span class="dates">{{ job.dates }}</span>
             </div>
             <p class="job-desc">{{ job.description }}</p>
             {% if job.stack %}
-            <div class="stack"><strong>Stack:</strong> {{ job.stack }}</div>
+            <div class="stack">[Stack]: {{ job.stack }}</div>
             {% endif %}
         </div>
         {% endfor %}
     </section>
 
+   <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            {% for skill_group in skills %}
+            <div>
+                <div class="skill-category">{{ skill_group.category }}</div>
+                <ul class="skill-list">
+                    {% for detail in skill_group.details %}
+                    <li>{{ detail }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
     <section>
-        <h2>Education</h2>
+        <h2>Education & Growth</h2>
         {% for edu in education %}
         <div class="job">
             <div class="job-header">
@@ -163,44 +96,19 @@
             </div>
             <div class="company">{{ edu.institution }}</div>
             {% if edu.description %}
-            <p class="job-desc" style="font-size: 0.9em;">{{ edu.description }}</p>
+            <p class="job-desc">{{ edu.description }}</p>
             {% endif %}
         </div>
         {% endfor %}
     </section>
     
     <section>
-        <h2>About Me</h2>
+        <h2>Profile</h2>
         <div class="about-text">{{ about }}</div>
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Script específico para el desplegable de materias
-            var header = document.getElementById('subjects-header');
-            var content = document.getElementById('subjects-content');
-            
-            if (header && content) {
-                header.addEventListener('click', function() {
-                    content.classList.toggle('show');
-                    this.classList.toggle('active');
-
-                    // Cambiar el texto del header (Traducido en el JavaScript)
-                    var roleSpan = this.querySelector('.role');
-                    if (content.classList.contains('show')) {
-                        roleSpan.textContent = "[-] Hide Courses";
-                    } else {
-                        roleSpan.textContent = "[+] Show Courses";
-                    }
-                });
-            }
-        });
-    </script>
-    
     <div class="footer">
-        CV generated programmatically using Python & Jinja2.<br>
-        Live Web Version: <a href="{{ info.website }}" class="footer-link" target="_blank">{{ info.website }}</a><br>
-        Code: <strong>github.com/Emanuel-Laiolo/CvGenerator</strong>
+        Plain text CV generated programmatically.
     </div>
 </body>
 </html>
