@@ -21,14 +21,15 @@
     {
       "category": "AI & Automation",
       "details": [
-        "Python, Neural Networks, OCR",
+        "Python, Neural Networks, Computer Vision (OpenCV)",
         "Workflow Optimization with LLMs (Claude, Gemini, Copilot)"
       ]
     },
     {
-      "category": "Foundational Tech",
+      "category": "Foundational & Logic",
       "details": [
-        "C, C++, Java, PHP, SQL, Data Structures"
+        "Python (Desktop GUIs/Tkinter), Game Theory (GTO), Algorithms",
+        "C, C++, Java, PHP, Data Structures"
       ]
     },
     {
@@ -45,6 +46,13 @@
       "dates": "Present",
       "description": "Architected and manage a VOD platform with complex subscription systems. Focused on performance optimization and rapid feature deployment.",
       "stack": "React, TypeScript, Vite, Tailwind CSS, PostgreSQL, Stripe, Resend."
+    },
+    {
+      "role": "Python Tooling Developer",
+      "company": "Poker Strategy RTA & Range Builder",
+      "dates": "2024 - Present",
+      "description": "Engineered a desktop application for creating and visualizing Game Theory (GTO) ranges. Implemented a visual grid editor with weighted decision logic (mixed strategies 70/30%) and a real-time assistant using RNG.",
+      "stack": "Python, Tkinter (GUI), JSON, Algorithmic Logic, RNG."
     },
     {
       "role": "AI & Automation Developer",
