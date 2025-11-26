@@ -8,8 +8,8 @@
     "github": "https://github.com/Emanuel-Laiolo/CvGenerator",
     "website": "https://emanuel-laiolo.github.io/CvGenerator/"
   },
-  "summary": "Full Stack Developer specialized in high-performance web applications and AI automation. Background in algorithmic data analysis and mathematical modeling.",
-  "about": "Full Stack Developer and Data Analyst with over 6 years of experience. I specialize in building scalable web applications and implementing AI-driven automation. I combine strong foundational knowledge in algorithms with a modern, high-performance stack (React, Node.js, Python). I am constantly integrating State-of-the-Art AI tools into my workflow to optimize code quality and efficiency. Open to remote challenges.",
+  "summary": "Full Stack Developer specialized in high-performance web applications and algorithmic logic. Background in mathematical modeling and data analysis.",
+  "about": "Full Stack Developer and Data Analyst with over 6 years of experience. I specialize in building scalable web applications and implementing complex algorithmic logic. I combine strong foundational knowledge in data structures with a modern, high-performance stack (React, Node.js, Python). I actively integrate advanced AI tools into my workflow to optimize code quality and development velocity. Open to remote challenges.",
   "skills": [
     {
       "category": "Development Stack",
@@ -19,17 +19,16 @@
       ]
     },
     {
-      "category": "AI & Automation",
+      "category": "Automation & Logic",
       "details": [
-        "Python, Neural Networks, Computer Vision (OpenCV)",
+        "Python (Desktop GUIs/Tkinter), Game Theory (GTO), Algorithms",
         "Workflow Optimization with LLMs (Claude, Gemini, Copilot)"
       ]
     },
     {
-      "category": "Foundational & Logic",
+      "category": "Foundational Tech",
       "details": [
-        "Python (Desktop GUIs/Tkinter), Game Theory (GTO), Algorithms",
-        "C, C++, Java, PHP, Data Structures"
+        "C, C++, Java, PHP, SQL, Data Structures"
       ]
     },
     {
@@ -51,15 +50,8 @@
       "role": "Python Tooling Developer",
       "company": "Poker Strategy RTA & Range Builder",
       "dates": "2024 - Present",
-      "description": "Engineered a desktop application for creating and visualizing Game Theory (GTO) ranges. Implemented a visual grid editor with weighted decision logic (mixed strategies 70/30%) and a real-time assistant using RNG.",
+      "description": "Engineered a desktop application for creating and visualizing Game Theory (GTO) ranges. Implemented a visual grid editor with weighted decision logic (mixed strategies) and a real-time assistant using RNG.",
       "stack": "Python, Tkinter (GUI), JSON, Algorithmic Logic, RNG."
-    },
-    {
-      "role": "AI & Automation Developer",
-      "company": "Independent Projects",
-      "dates": "2022 - 2024",
-      "description": "Developed custom Python solutions for automation. Built and trained a Neural Network for Optical Character Recognition (OCR) to automate decision-making based on visual data.",
-      "stack": "Python, Neural Networks, Computer Vision."
     },
     {
       "role": "Algorithmic Data Analyst",
