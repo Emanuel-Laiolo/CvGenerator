@@ -1,21 +1,27 @@
 {
   "info": {
-    "name": "Emanuel",
+    "name": "Emanuel Laiolo",
     "title": "Full Stack Developer & Data Analyst",
     "location": "Kraków, Poland",
-    "email": "ema_laiolo@gmail.com",
+    "email": "emalaiolo@gmail.com",
     "linkedin": "https://www.linkedin.com/in/emanuel-laiolo-300b31313",
-    "github": "https://github.com/Emanuel-Laiolo/CvGenerator",
-    "website": "https://emanuel-laiolo.github.io/CvGenerator/"
+    "github": "https://github.com/Emanuel-Laiolo/CvGenerator"
   },
-  "summary": "Full Stack Developer specialized in high-performance web applications and algorithmic logic. Background in mathematical modeling and data analysis.",
-  "about": "Full Stack Developer and Data Analyst with over 6 years of experience. I specialize in building scalable web applications and implementing complex algorithmic logic. I combine strong foundational knowledge in data structures with a modern, high-performance stack (React, Node.js, Python). I actively integrate advanced AI tools into my workflow to optimize code quality and development velocity. Open to remote challenges.",
+  "summary": "Full Stack Developer specialized in high-performance web applications and algorithmic logic. Proven experience in developing and commercializing complex software solutions for data analysis and risk management.",
+  "about": "Full Stack Developer and Data Analyst with over 6 years of experience. I specialize in building scalable web applications and implementing complex algorithmic logic. I combine strong foundational knowledge in data structures with a modern, high-performance stack (React, Node.js, Python). I actively integrate advanced AI tools into my workflow.\n\n*Note: Since my projects are commercial products (proprietary software), the source code is hosted in private repositories. However, I am happy to provide code walkthroughs and live demonstrations of the platforms during an interview.*",
   "skills": [
     {
       "category": "Development Stack",
       "details": [
         "React, TypeScript, Vite, Tailwind CSS, Framer Motion",
         "Node.js, PostgreSQL, Supabase, SQL, Stripe, Cloudflare Stream"
+      ]
+    },
+    {
+      "category": "Tools & Platforms",
+      "details": [
+        "Visual Studio Code, GitHub, Git Version Control",
+        "Shopify (E-commerce Development), Vercel"
       ]
     },
     {
@@ -41,23 +47,23 @@
   "experience": [
     {
       "role": "Lead Full Stack Developer",
-      "company": "Yogalorena.com",
+      "company": "SaaS VOD Platform (Wellness Industry)",
       "dates": "Present",
-      "description": "Architected and manage a VOD platform with complex subscription systems. Focused on performance optimization and rapid feature deployment.",
+      "description": "Architected and built a scalable Video-on-Demand platform featuring automated subscription billing (Stripe), secure high-quality video streaming (Cloudflare), and a custom course progression system. Managed the full lifecycle from design to deployment. (Live Commercial Product - Demo Available upon Request)",
       "stack": "React, TypeScript, Vite, Tailwind CSS, PostgreSQL, Stripe, Resend."
     },
     {
-      "role": "Python Tooling Developer",
-      "company": "Poker Strategy RTA & Range Builder",
+      "role": "Software Developer & Entrepreneur",
+      "company": "Poker Strategy Software Solutions",
       "dates": "2024 - Present",
-      "description": "Engineered a desktop application for creating and visualizing Game Theory (GTO) ranges. Implemented a visual grid editor with weighted decision logic (mixed strategies) and a real-time assistant using RNG.",
-      "stack": "Python, Tkinter (GUI), JSON, Algorithmic Logic, RNG."
+      "description": "Engineered and commercialized a sophisticated desktop application for elite-level Game Theory (GTO) study. The software provides deep analysis capabilities and a visual grid editor for constructing complex mixed strategies, utilized by professional players for off-table optimization. (Private Repo - Commercial Product)",
+      "stack": "Python, Tkinter (GUI), JSON, Algorithmic Logic, Statistics."
     },
     {
       "role": "Algorithmic Data Analyst",
-      "company": "Private Quantitative Project",
+      "company": "Independent Consultant",
       "dates": "2018 - 2022",
-      "description": "Designed a mathematical bankroll management system using solvers and multi-terabyte databases to predict Equity, EV, and risk based on statistical probability.",
+      "description": "Designed and sold bespoke mathematical bankroll management systems. Utilized solvers and multi-terabyte databases to predict Equity, EV, and risk, enabling clients to optimize their investment strategies.",
       "stack": "SQL, Big Data, Statistics & Probability, Solvers."
     }
   ],
