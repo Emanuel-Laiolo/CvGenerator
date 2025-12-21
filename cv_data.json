@@ -1,7 +1,7 @@
 {
   "info": {
     "name": "Emanuel Laiolo",
-    "title": "Full Stack Developer & Data Analyst",
+    "title": "Young Developer / Entrepreneur / AIpreneur",
     "location": "Kraków, Poland",
     "email": "emalaiolo@gmail.com",
     "linkedin": "https://www.linkedin.com/in/emanuel-laiolo-300b31313",
@@ -46,23 +46,30 @@
   ],
   "experience": [
     {
+      "role": "Co-founder",
+      "company": "Yoga4Poker",
+      "dates": "Feb. 2025 - Present",
+      "description": "High-performance training program bridging the gap between mental well-being and professional gaming. Co-developed a specialized curriculum combining neuroscience and yoga to optimize cognitive load and led the digital strategy/market positioning.",
+      "stack": "Entrepreneurship, Product Strategy, Strategic Vision."
+    },
+    {
       "role": "Lead Full Stack Developer",
-      "company": "SaaS VOD Platform (Wellness Industry)",
-      "dates": "Present",
-      "description": "Architected and built a scalable Video-on-Demand platform featuring automated subscription billing (Stripe), secure high-quality video streaming (Cloudflare), and a custom course progression system. Managed the full lifecycle from design to deployment. (Live Commercial Product - Demo Available upon Request)",
-      "stack": "React, TypeScript, Vite, Tailwind CSS, PostgreSQL, Stripe, Resend."
+      "company": "YogaLorena.com",
+      "dates": "Nov. 2025 - Dec. 2025",
+      "description": "Architected and built a scalable Video-on-Demand platform featuring automated subscription billing (Stripe), secure high-quality video streaming (Cloudflare), and a custom course progression system. Managed the full lifecycle from design to deployment.",
+      "stack": "React, TypeScript, Vite, PostgreSQL, Stripe, Resend."
     },
     {
       "role": "Software Developer & Entrepreneur",
       "company": "Poker Strategy Software Solutions",
-      "dates": "2024 - Present",
-      "description": "Engineered and commercialized a sophisticated desktop application for elite-level Game Theory (GTO) study. The software provides deep analysis capabilities and a visual grid editor for constructing complex mixed strategies, utilized by professional players for off-table optimization. (Private Repo - Commercial Product)",
+      "dates": "May 2023 - Aug. 2024",
+      "description": "Engineered and commercialized a sophisticated desktop application for elite-level Game Theory (GTO) study. The software provides deep analysis capabilities and a visual grid editor for constructing complex mixed strategies.",
       "stack": "Python, Tkinter (GUI), JSON, Algorithmic Logic, Statistics."
     },
     {
       "role": "Algorithmic Data Analyst",
       "company": "Independent Consultant",
-      "dates": "2018 - 2022",
+      "dates": "Mar. 2022 - Apr. 2023",
       "description": "Designed and sold bespoke mathematical bankroll management systems. Utilized solvers and multi-terabyte databases to predict Equity, EV, and risk, enabling clients to optimize their investment strategies.",
       "stack": "SQL, Big Data, Statistics & Probability, Solvers."
     }
@@ -71,8 +78,14 @@
     {
       "institution": "Universidad Tecnológica Nacional (UTN)",
       "degree": "University Technician in Programming",
-      "year": "2018 - 2020",
-      "description": "Graduated from the National Technological University (UTN), Argentina."
+      "year": "2025 - 2027",
+      "description": "Current studies in Software Development and Programming Logic at UTN, Argentina."
+    },
+    {
+      "institution": "Instituto Don Bosco (Bahía Blanca)",
+      "degree": "Bachelor of Social Sciences",
+      "year": "2010 - 2017",
+      "description": "Secondary education with a focus on Social Sciences."
     },
     {
       "degree": "Continuous Learning",
